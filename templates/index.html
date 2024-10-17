@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DorkSearch</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="row">
+            <div class="prime-logo-core">
+                <div class="prime-logo">
+                    <span class="logo-main">Dork<span class="letter-dot">Search</span></span>
+                    <div class="prime-logo-secondary">Inspired by SearchThat.net<span class="emoji-logo">☠︎︎</span></div>
+                </div>
+
+                <div class="searchbar">
+                    <form id="searchForm" onsubmit="return performSearch()">
+                        <input type="text" id="searchInput" class="input" placeholder="Type something here....">
+                        <button type="submit" class="search">☠︎︎</button>
+                    </form>
+                </div>
+
+                <div id="searchResults" class="results-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
