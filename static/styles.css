@@ -1,0 +1,198 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: #0b0a0a; /* Dark background */
+}
+
+body {
+    font-family: 'Courier New', monospace; /* Monospace font for hacker vibe */
+    color: #ff1a1a; /* Neon red text */
+}
+
+/* Flex Container */
+.flex-container {
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Flex Container Row */
+.flex-container .row {
+    width: 100%;
+}
+
+/* Prime Logo Container */
+.prime-logo-core {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Prime Logo Core Font */
+.prime-logo {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+/* Logo Main Styling with Pulsing Neon Effect */
+.logo-main {
+    font-family: 'Courier New', monospace;
+    color: #ff1a1a; /* Neon red */
+    font-size: 67px;
+    text-shadow: 0 0 10px #ff1a1a, 0 0 20px #ff3333, 0 0 30px #ff6666;
+    transition: all 0.3s ease-in-out;
+    animation: pulse 1.5s infinite; /* Faster pulse for intensity */
+}
+
+/* Pulsing Animation */
+@keyframes pulse {
+    0% {
+        text-shadow: 0 0 10px #ff1a1a, 0 0 20px #ff3333, 0 0 30px #ff6666;
+    }
+    50% {
+        text-shadow: 0 0 20px #ff3333, 0 0 30px #ff6666, 0 0 40px #ff0000;
+    }
+    100% {
+        text-shadow: 0 0 10px #ff1a1a, 0 0 20px #ff3333, 0 0 30px #ff6666;
+    }
+}
+
+/* Letter Dot */
+.letter-dot {
+    color: #0b0a0a; /* Dark background dot */
+}
+
+/* Prime Logo Secondary Text */
+.prime-logo-secondary {
+    font-family: 'Courier New', monospace;
+    font-size: 16px;
+    margin-top: -15px;
+    color: #ff6666; /* Slightly lighter neon */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Emoji Logo */
+.emoji-logo {
+    font-size: 20px;
+}
+
+/* Search Bar Form */
+.searchbar form {
+    display: flex;
+    height: 35px;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+/* SearchBar Button Close */
+.searchbar .close {
+    border-radius: 10px 0 0 10px;
+    border: none;
+}
+
+/* SearchBar Button Search */
+.searchbar .search {
+    border-radius: 0 10px 10px 0;
+    border: none;
+}
+
+/* Shared SearchBar Button Styling */
+.searchbar .close, .searchbar .search {
+    height: 35px;
+    width: 40px;
+    font-size: 15px;
+    background: #3d0f0f; /* Darker red */
+    color: transparent;
+    text-shadow: 0 0 0 #ff6666;
+    text-align: center;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #ff3333; /* Neon glow effect */
+}
+
+.searchbar .close:hover, .searchbar .search:hover {
+    background: #660000; /* Neon red on hover */
+    box-shadow: 0 0 20px #ff6666; /* Bright glow on hover */
+}
+
+/* SearchBar Input */
+.searchbar .input {
+    height: 35px;
+    width: 482px;
+    font-size: 18px;
+    border: none;
+    background: #2b0d0d; /* Dark red input background */
+    color: #ff6666; /* Neon text */
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.searchbar .input:hover {
+    background: #3e0f0f; /* Slightly brighter red on hover */
+    box-shadow: 0 0 10px #ff6666; /* Glow on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 600px) {
+    .prime-logo-core {
+        width: 100%;
+    }
+    .searchbar .input {
+        width: 100%;
+    }
+    .searchbar form {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 537px) {
+    .logo-main {
+        font-size: 60px;
+    }
+    .emoji-logo {
+        font-size: 16px;
+    }
+    .prime-logo-secondary {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 462px) {
+    .logo-main {
+        font-size: 50px;
+    }
+    .emoji-logo {
+        font-size: 14px;
+    }
+    .prime-logo-secondary {
+        font-size: 13px;
+        margin-top: -10px;
+    }
+}
+
+/* Prevent display on very small screens */
+@media screen and (max-width: 250px) {
+    html:before {
+        text-align: center;
+        margin-top: 25%;
+        content: "Sorry, Screen Size Too Small To View.";
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    body {
+        display: none;
+    }
+}
